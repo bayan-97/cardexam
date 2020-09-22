@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<main>
+    <section>
+        <% card3.forEach(element => {%>
+            <p>Cases:<%= element.country%></p>
+            <p>DATE:<%= element.confirmed_cases %></p>
+            <p>DATE:<%= element.death_cases %></p>
+            <p>DATE:<%= element.Rrecoverd_cases %></p>
+            <p>DATE:<%= element.date %></p>
+            <form action="/add" method="get">
+            <input type="text" name="country" value="<%= element.country%>">
+            <input type="text" name="confirmed_cases" value="<%= element.confirmed_cases %>">
+            <input type="text" name="death_cases" value="<%= element.death_cases %>">
+            <input type="text" name="Rrecoverd_cases" value="<%= element.Rrecoverd_cases %>">
+            <!-- <input type="date" name="date" id="date" value="<%=element.date %>"> -->
+            
+                        <button type="submit">b</button>
+                       </form>
+
+            <%});%>
+    </section>
+</main>   
+</body>
+</html>

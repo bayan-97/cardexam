@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/allcountry">all</a>
+    <section>
+        <p>WORLD TOTAL</p>
+        <div>
+        <p>TotalConfirmed:<%=card1.TotalConfirmed%></p>
+        </div>
+        <div>
+            <p>TotalDeaths:<%=card1.TotalDeaths%></p>
+            </div>
+            <div>
+                <p>TotalRecovered:<%=card1.TotalRecovered%></p>
+                </div>
+    </section>
+    <form action="countryresult" method="get">
+
+        <input type="text" name="country">
+        <input type="date" name="startdate" id="startdate">
+        <input type="date" name="enddate" id="enddate">
+<button type="submit">search</button>
+    </form>
+</body>
+</html>
