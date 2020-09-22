@@ -116,6 +116,7 @@ function myrecordHelder(req,res) {
     })
     
 }
+
 app.delete("/delete/:id",deleteHelder)
 function deleteHelder(req,res) {
     let safe=[req.params ]
