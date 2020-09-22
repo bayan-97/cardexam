@@ -74,7 +74,7 @@ function addHelder(req,res) {
     console.log(req.query);
 let {country,confirmed_cases,death_cases,Rrecoverd_cases}=req.query
     let sql=`INSERT INTO cards (country,confirmed_cases,death_cases ,Rrecoverd_cases)
-    VALUES ($1,$2,$3,$4,$5);`
+    VALUES ($1,$2,$3,$4);`
     // console.log(url);
     console.log(sql);
     let safe=[country,confirmed_cases,death_cases,Rrecoverd_cases]
@@ -116,7 +116,21 @@ function myrecordHelder(req,res) {
     })
     
 }
+app.delete("/delete/:id",deleteHelder)
+function deleteHelder(req,res) {
+    let safe=[req.params ]
 
+    let sql=`DELETE FROM cards WHERE id=$1; `
+    // console.log(url);
+
+ client.query(sql,safe).then((data)=>{
+       
+       
+      
+             res.redirect ("/myrecord")
+    })
+    
+}
 
 
 

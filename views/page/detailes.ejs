@@ -13,7 +13,14 @@
             <p>DATE:<%= element.death_cases %></p>
             <p>DATE:<%= element.Rrecoverd_cases %></p>
             <p>DATE:<%= element.date %></p>
-            <form action="" method="post"></form>
+            <form action="/delete/<%= element.id %>?_method=delete" method="post">
+                <button>delete</button>
+
+            </form>
+            <form action="/update/<%= element.id %>?_method=put" method="post">
+                <button>update</button>
+
+            </form>
             <%});%>
     </section>
     
